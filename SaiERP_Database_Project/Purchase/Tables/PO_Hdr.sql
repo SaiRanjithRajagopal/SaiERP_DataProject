@@ -1,14 +1,14 @@
 ﻿CREATE TABLE [Purchase].[PO_Hdr] (
-    [Refno]             BIGINT IDENTITY (1, 1) NOT NULL,
-    [Supplier_Id_Fk]    BIGINT NOT NULL,
+    [Ref_Id]             BIGINT IDENTITY (1, 1) NOT NULL,
+    [Supplier_Id]    BIGINT NOT NULL,
     [Total_Amount]      MONEY  NULL,
-    [CreatedBy_Fk]      BIGINT NOT NULL,
-    [LastModifiedBy_Fk] BIGINT NOT NULL,
+    [Created_By]      BIGINT NOT NULL,
+    [LastModified_By] BIGINT NOT NULL,
     [CreatedDate]       DATE   DEFAULT (getdate()) NOT NULL,
     [LastModifiedDate]  DATE   NOT NULL,
-    PRIMARY KEY CLUSTERED ([Refno] ASC),
-    FOREIGN KEY ([CreatedBy_Fk]) REFERENCES [Hrms].[Employee_Master] ([Employee_Id]),
-    FOREIGN KEY ([LastModifiedBy_Fk]) REFERENCES [Hrms].[Employee_Master] ([Employee_Id]),
-    FOREIGN KEY ([Supplier_Id_Fk]) REFERENCES [Supplier].[Master] ([Id])
+    CONSTRAINT [PK_PO_Hdr_Ref_Id] PRIMARY KEY CLUSTERED ([Ref_Id] ASC),
+    CONSTRAINT [FK_Created_By_PO_Hdr_To_Hrms.Employee_Master] FOREIGN KEY ([Created_By]) REFERENCES [Hrms].[Employee_Master] ([Employee_Id]),
+    CONSTRAINT [FK_LastModified_By_PO_Hdr_To_Hrms.Employee_Master] FOREIGN KEY ([LastModified_By]) REFERENCES [Hrms].[Employee_Master] ([Employee_Id]),
+    CONSTRAINT [FK_Supplier_Id_PO_Hdr_To_Supplier.Master] FOREIGN KEY ([Supplier_Id]) REFERENCES [Supplier].[Master] ([Supplier_Id])
 );
 

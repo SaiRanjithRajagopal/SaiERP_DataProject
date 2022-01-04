@@ -10,6 +10,6 @@
     [Homephone]     VARCHAR (20)   NULL,
     [Workphone]     VARCHAR (20)   NULL,
     [Date_Of_Birth] DATE           NULL,
-    PRIMARY KEY CLUSTERED ([Employee_Id] ASC)
+    CONSTRAINT [PK_Employee_Id] PRIMARY KEY CLUSTERED ([Employee_Id] ASC) 
 );
 

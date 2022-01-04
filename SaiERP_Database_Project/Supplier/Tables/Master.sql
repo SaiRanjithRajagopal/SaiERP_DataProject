@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [Supplier].[Master] (
-    [Id]               BIGINT         IDENTITY (1, 1) NOT NULL,
+    [Supplier_Id]               BIGINT         IDENTITY (1, 1) NOT NULL,
     [CompanyName]      VARCHAR (1000) NOT NULL,
     [Contact_Name]     VARCHAR (1000) NOT NULL,
     [Address]          VARCHAR (2000) NULL,
@@ -12,6 +12,8 @@
     [ModifiedBy]       BIGINT         NOT NULL,
     [CreatedDate]      DATE           DEFAULT (getdate()) NOT NULL,
     [LastModifiedDate] DATE           NOT NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
+    PRIMARY KEY CLUSTERED ([Supplier_Id] ASC), 
+    CONSTRAINT [FK_Master_CreatedBy_To_Hrms_Employee_Master] FOREIGN KEY (CreatedBy) REFERENCES [Hrms].[Employee_Master]([Employee_Id]), 
+    CONSTRAINT [FK_Master_ModifiedBy_To_Hrms_Employee_Master] FOREIGN KEY ([ModifiedBy]) REFERENCES [Hrms].[Employee_Master]([Employee_Id])
 );
 

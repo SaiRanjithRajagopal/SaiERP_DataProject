@@ -81,4 +81,7 @@
     <Build Include="Security\Purchase.sql" />
     <Build Include="Security\Supplier.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SaiERP_Database_Project.refactorlog" />
+  </ItemGroup>
 </Project>

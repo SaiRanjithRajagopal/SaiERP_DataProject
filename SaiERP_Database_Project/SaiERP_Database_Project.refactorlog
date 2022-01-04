@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="2355ff0d-7825-4762-a7b5-59597433baa1" ChangeDateTime="01/04/2022 00:27:43">
+    <Property Name="ElementName" Value="[Supplier].[FK_Master_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[Supplier].[Master]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Master_Hrms_Employee_Master]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="721295a5-b87f-4766-aeb0-b9ad7bbedac3" ChangeDateTime="01/04/2022 00:29:42">
+    <Property Name="ElementName" Value="[Supplier].[FK_Master_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[Supplier].[Master]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Master_Hrms_Employee_Master]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="56abebb0-9b12-4ff9-8a8a-b17b55de0390" ChangeDateTime="01/04/2022 00:29:51">
+    <Property Name="ElementName" Value="[Supplier].[FK_Master_Hrms_Employee_Master]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[Supplier].[Master]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Master_To_Hrms_Employee_Master]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f1904f22-9aa6-4bac-b875-e6bc48300216" ChangeDateTime="01/04/2022 00:29:54">
+    <Property Name="ElementName" Value="[Supplier].[FK_Master_Hrms_Employee_Master]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[Supplier].[Master]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Master_To_Hrms_Employee_Master]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5e841daa-5368-4216-8a21-b39db3da9777" ChangeDateTime="01/04/2022 00:33:54">
+    <Property Name="ElementName" Value="[Purchase].[MRQ_Details].[Hdr_Refno_Fk]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Purchase].[MRQ_Details]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MRQ_Details_To_MRQ_Hdr_Refno]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6b9dc7ea-32a7-4931-bb93-19062ed67403" ChangeDateTime="01/04/2022 01:01:42">
+    <Property Name="ElementName" Value="[Inventory].[Item_Group].[Group_No]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Inventory].[Item_Group]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Group_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b895f2f8-6aa6-4851-bb87-c1f5650d0cea" ChangeDateTime="01/04/2022 01:01:50">
+    <Property Name="ElementName" Value="[Inventory].[Item_Master].[Item_Master_No]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Inventory].[Item_Master]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Item_Master_Id" />
+  </Operation>
+</Operations>
