@@ -13,7 +13,7 @@
     </RootPath>
     <RootNamespace>SaiERP_Database_Project</RootNamespace>
     <AssemblyName>SaiERP_Database_Project</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -22,6 +22,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,8 +58,27 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Hrms\" />
+    <Folder Include="Hrms\Tables\" />
+    <Folder Include="Inventory\" />
+    <Folder Include="Inventory\Tables\" />
+    <Folder Include="Purchase\" />
+    <Folder Include="Purchase\Tables\" />
+    <Folder Include="Supplier\" />
+    <Folder Include="Supplier\Tables\" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Schema1.sql" />
+    <Build Include="Hrms\Tables\Employee_Master.sql" />
+    <Build Include="Inventory\Tables\Item_Group.sql" />
+    <Build Include="Inventory\Tables\Item_Master.sql" />
+    <Build Include="Purchase\Tables\MRQ_Details.sql" />
+    <Build Include="Purchase\Tables\MRQ_Hdr.sql" />
+    <Build Include="Supplier\Tables\Master.sql" />
+    <Build Include="Purchase\Tables\PO_Hdr.sql" />
+    <Build Include="Security\Hrms.sql" />
+    <Build Include="Security\Inventory.sql" />
+    <Build Include="Security\Purchase.sql" />
+    <Build Include="Security\Supplier.sql" />
   </ItemGroup>
 </Project>

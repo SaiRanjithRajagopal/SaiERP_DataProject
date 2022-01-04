@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hrms]
+    AUTHORIZATION [dbo];
+
