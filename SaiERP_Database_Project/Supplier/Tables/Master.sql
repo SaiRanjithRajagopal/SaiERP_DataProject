@@ -12,7 +12,7 @@
     [ModifiedBy]       BIGINT         NOT NULL,
     [CreatedDate]      DATE           DEFAULT (getdate()) NOT NULL,
     [LastModifiedDate] DATE           NOT NULL,
-    PRIMARY KEY CLUSTERED ([Supplier_Id] ASC), 
+    CONSTRAINT [PK_Supplier_Id] PRIMARY KEY CLUSTERED ([Supplier_Id] ASC), 
     CONSTRAINT [FK_Master_CreatedBy_To_Hrms_Employee_Master] FOREIGN KEY (CreatedBy) REFERENCES [Hrms].[Employee_Master]([Employee_Id]), 
     CONSTRAINT [FK_Master_ModifiedBy_To_Hrms_Employee_Master] FOREIGN KEY ([ModifiedBy]) REFERENCES [Hrms].[Employee_Master]([Employee_Id])
 );
